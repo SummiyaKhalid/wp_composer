@@ -17,7 +17,6 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-
 if( stristr( $_SERVER['SERVER_NAME'], "localhost" ) ) {
 
 define('DB_NAME', 'wp_test');
@@ -184,6 +183,14 @@ define('WP_CACHE', true);
 }
 
 
+define('WP_DEBUG', false);
+define('WP_HOME', 'http://localhost:8080/test');
+define('WP_SITEURL', WP_HOME . '/wp');
+define( 'WP_CONTENT_URL', WP_HOME .  '/wp-content' );
+define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
+
+
+
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -202,3 +209,5 @@ define('ABSPATH', dirname(__FILE__) . '/');
 
 
 require_once(ABSPATH . 'wp-settings.php');
+
+
